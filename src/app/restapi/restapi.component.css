@@ -1,0 +1,10 @@
+.block{
+    width: 20%;
+    display: inline-block;
+    margin-left: 2%;
+}
+button{
+    display: block;
+    width: 300px;
+    padding: 10px;
+}

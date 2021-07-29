@@ -1,0 +1,12 @@
+<div class="container">
+    <div style="margin-top: 10%;" id="formheader">
+        <label class="text-danger">{{message}}</label>
+        <input type="text" [(ngModel)]="username" placeholder="Login"><br>
+        <input type="password" [(ngModel)]="password" placeholder="Password"><br>
+        
+    </div>
+    <div id="formfooter">
+        <button class="btn btn-primary" (click)="login()">LOG IN</button>
+        
+    </div>
+</div>

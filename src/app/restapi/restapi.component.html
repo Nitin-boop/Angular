@@ -1,0 +1,8 @@
+<div id="gg">
+    <button style="margin: 2%;" class="btn btn-primary" (click)="sum()">Show Users</button><br>
+    <div [hidden]="showUsers" class="block" *ngFor="let i of user">
+        <img src="{{i.avatar}}"/><br>
+        <strong>Name: </strong>{{i.first_name}} {{i.last_name}} <br>
+        <strong>Email: </strong>{{i.email}}
+    </div>
+</div>

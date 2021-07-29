@@ -1,0 +1,16 @@
+<div class="container">
+    <strong>Employee Details</strong>
+    <hr>
+    <p>ID : {{employee.id}}
+        <br/>Name : {{employee.name}}
+        <br/>Salary : {{employee.salary|currency:"INR"}}
+        <br/>Department : {{employee.department.name}}
+        <br/><span *ngIf=employee.permanent>Permanent : Yes</span>
+        </p><hr>
+        <strong>Skills</strong>
+        <table *ngFor="let i of employee.skills">
+            <tr><td>{{i.name}}</td></tr>
+        </table>
+        
+    
+</div>

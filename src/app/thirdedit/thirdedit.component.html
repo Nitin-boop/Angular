@@ -1,0 +1,27 @@
+
+<div class="row">
+<div style="margin: 2%;"  class="col-4">
+  <strong>Name</strong><br>
+  <input required minlength="2" maxlength="10" type="text" [(ngModel)]="list.name" #name="ngModel"><br>
+  <label style="font-size: 12px;" class="text-danger"  *ngIf="name.invalid">Name must be atleast 2 characters long</label>
+  <br>
+  <strong>Salary</strong><br>
+  <input required minlength="2" maxlength="10" type="text" [(ngModel)]="list.salary"><br>
+  <br>
+  <strong>Is Permanent or not?</strong><br>
+  <input type="radio" [value]=true name="permanent" [(ngModel)]="list.permanent" id="permanentTrue"><label style="margin-left: 1%;">Yes</label>
+  <input style="margin-left: 3%;" type="radio" [value]=false name="permanent" [(ngModel)]="list.permanent" id="permanentFalse"><label style="margin-left: 1%;">No</label><br>
+  <br>
+  <strong>Department</strong><br>
+  <select [(ngModel)]="list.department.id" (change)="new()">
+    <option *ngFor="let i of departments" [value]="i.id" [selected]="list.department.id==i.id">{{i.name}}</option>
+  </select>
+  <br><br>
+  <button class="btn btn-primary">Save</button>
+</div>
+<div style="margin: 2%;" class="col-6" >
+  <strong>Employee Model</strong><br> 
+  <pre>{{list|json}}</pre>  
+  </div>
+
+</div>
